@@ -1,0 +1,190 @@
+.icon-size{
+    font-size: 50px;
+    
+}
+
+.style-for-bar{
+    color:black;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.task-background-color{
+    background-color:#2181db;
+    height:100vh;
+    background-size: cover;
+
+}
+.task-main-heading{
+    font-size: 50px;
+    font-family: "Roboto";
+    font-weight:bold;
+    color:white;
+    text-align: center;
+    margin-top: 100px;
+}
+.task-main-para{
+    font-size: 20px;
+    font-family: "Roboto";
+    
+    color:white;
+    text-align: center;
+   
+}
+
+.task-button{
+    background-color: white;
+    color:black;
+    padding:5px;
+    height:60px;
+    width:120px;
+    border-width:0px;
+    font-size: 18px;
+    border-radius: 5px;
+    
+}
+
+.task-space{
+    margin-top: 100px;
+}
+.task1-background{
+    background-color:White;
+    height:100vh;
+    background-size:cover;
+    text-align: center;
+    
+}
+.task1-heading{
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color:black;
+    margin-top: 150px;
+}
+.task1-para{
+    font-size: 20px;
+    font-family: "Roboto";
+    
+    color:#73829e;
+}
+
+.task1-button{
+    height:50px;
+    width:150px;
+    border-radius: 5px;
+    border-color: white;
+    border-width: 0px;
+    color:white;
+    padding:10px;
+    
+}
+
+.task1-paragraph{
+    color:#73829e;
+}
+.task1-skills{
+    background-color: #c09bc2;
+    color:white;
+    border-width:0px;
+    border-radius: 5px;
+    height:50px;
+    width:100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.task2-background{
+    background-color: white;
+    height:100vh;
+    background-size:cover;
+}
+.task2-heading{
+    color: black;
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: bold;
+   
+    margin-top: 10px;
+}
+.task2-para{
+    font-size: 20px;
+    font-family: "Roboto";
+     color:#73829e;
+}
+
+.task2-image {
+    width: 100%;
+    height:250px;
+    width:400px;
+}
+.task2-paragraph{
+    font-size: 16px;
+    
+     color:#73829e;
+}
+
+.task2-second-Heading{
+    font-size: 24px;
+}
+
+.contact-background{
+    background-color:#2181db;
+    height:100vh;
+    background-size: cover;
+    
+}
+.contact-heading{
+    font-size: 50px;
+   
+    font-weight:bold;
+    color:white;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.contact-para{
+    font-size: 20px;
+    
+    
+    color:white;
+    text-align: center;
+}
+
+
+.task-spac{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-container{
+    background-color: white;
+    border-radius: 10px;
+    height:450px;
+    width:800px;
+    
+}
+.card-arrange{
+    margin-left: 250px;
+}
+.card-heading{
+    font-size: 24px;
+    font-weight: 500;
+    padding:16px;
+}
+.small-card{
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #abeaeb;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.inner-text{
+    color:grey;
+    font-size: 16px;
+    padding:20px;
+}
+.nav-bar-style{
+    font-weight: 700;
+    padding-left: 5px;
+}
