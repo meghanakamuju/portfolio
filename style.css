@@ -1,190 +1,374 @@
-.icon-size{
-    font-size: 50px;
-    
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --bg-900: #fafafa;
+    --bg-800: #f1f5f9;
+    --panel: #ffffff;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #475569;
+    --accent: #38bdf8;
+    --accent-2: #38bdf8;
+    --pill: #38bdf8;
+    --shadow: 0 14px 40px rgba(30, 41, 59, 0.14);
 }
 
-.style-for-bar{
-    color:black;
-    margin-left: 5px;
-    font-size: 16px;
+* {
+    box-sizing: border-box;
 }
 
-.task-background-color{
-    background-color:#2181db;
-    height:100vh;
-    background-size: cover;
-
-}
-.task-main-heading{
-    font-size: 50px;
-    font-family: "Roboto";
-    font-weight:bold;
-    color:white;
-    text-align: center;
-    margin-top: 100px;
-}
-.task-main-para{
-    font-size: 20px;
-    font-family: "Roboto";
-    
-    color:white;
-    text-align: center;
-   
-}
-
-.task-button{
-    background-color: white;
-    color:black;
-    padding:5px;
-    height:60px;
-    width:120px;
-    border-width:0px;
-    font-size: 18px;
-    border-radius: 5px;
-    
-}
-
-.task-space{
-    margin-top: 100px;
-}
-.task1-background{
-    background-color:White;
-    height:100vh;
-    background-size:cover;
-    text-align: center;
-    
-}
-.task1-heading{
-    font-size: 30px;
-    font-family: "Roboto";
-    font-weight: bold;
-    color:black;
-    margin-top: 150px;
-}
-.task1-para{
-    font-size: 20px;
-    font-family: "Roboto";
-    
-    color:#73829e;
-}
-
-.task1-button{
-    height:50px;
-    width:150px;
-    border-radius: 5px;
-    border-color: white;
-    border-width: 0px;
-    color:white;
-    padding:10px;
-    
-}
-
-.task1-paragraph{
-    color:#73829e;
-}
-.task1-skills{
-    background-color: #c09bc2;
-    color:white;
-    border-width:0px;
-    border-radius: 5px;
-    height:50px;
-    width:100px;
-}
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.task2-background{
-    background-color: white;
-    height:100vh;
-    background-size:cover;
+body {
+    margin: 0;
+    background: var(--bg-900);
+    color: var(--text);
+    font-family: "Roboto", "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.6;
 }
-.task2-heading{
-    color: black;
-    font-size: 30px;
-    font-family: "Roboto";
-    font-weight: bold;
-   
-    margin-top: 10px;
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12);
 }
-.task2-para{
-    font-size: 20px;
-    font-family: "Roboto";
-     color:#73829e;
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2830,41,59, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.icon-size {
+    font-size: 36px;
+    color: var(--accent);
+}
+
+.nav-bar-style {
+    font-weight: 700;
+    color: var(--muted) !important;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.nav-bar-style:hover,
+.nav-bar-style:focus,
+.nav-bar-style.active {
+    color: var(--accent) !important;
+}
+
+.task-background-color {
+    min-height: 100vh;
+    background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.16), transparent 32%),
+        radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.12), transparent 30%),
+        linear-gradient(135deg, #fafafa 0%, #f1f5f9 100%);
+    padding: 140px 0 120px;
+    display: flex;
+    align-items: center;
+}
+
+.task-main-heading {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.task-main-para {
+    font-size: 18px;
+    color: var(--muted);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 28px;
+}
+
+.task-button {
+    background: var(--accent);
+    color: #ffffff;
+    padding: 14px 26px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.task-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(56, 189, 248, 0.3);
+    background: #18b4f4;
+}
+
+.task-space {
+    margin-top: 32px;
+}
+
+.section-card {
+    background: var(--panel);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 28px 28px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.hero-card {
+    padding: 40px 32px;
+}
+
+.experience-role {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.experience-meta {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.experience-list {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.task1-background {
+    background: var(--bg-900);
+    min-height: 100vh;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.work-background {
+    background: var(--bg-800);
+    min-height: 100vh;
+    padding: 120px 0;
+}
+
+.task1-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.task1-para {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.task1-paragraph {
+    color: var(--muted);
+    font-size: 16px;
+    text-align: left;
+}
+
+.task1-button {
+    height: 48px;
+    width: 150px;
+    border-radius: 999px;
+    border: none;
+    color: #ffffff;
+    background: var(--accent);
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+.task1-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+}
+
+.task1-skills {
+    background: rgba(56, 189, 248, 0.14);
+    color: var(--text);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    border-radius: 999px;
+    height: 44px;
+    min-width: 96px;
+    padding: 0 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.task2-background {
+    background: var(--bg-900);
+    min-height: 100vh;
+    padding: 120px 0;
+}
+
+.task2-heading {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.task2-para {
+    font-size: 18px;
+    color: var(--muted);
 }
 
 .task2-image {
     width: 100%;
-    height:250px;
-    width:400px;
+    max-width: 420px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    object-fit: cover;
 }
-.task2-paragraph{
+
+.task2-paragraph {
     font-size: 16px;
-    
-     color:#73829e;
+    color: var(--muted);
 }
 
-.task2-second-Heading{
+.task2-second-Heading {
     font-size: 24px;
-}
-
-.contact-background{
-    background-color:#2181db;
-    height:100vh;
-    background-size: cover;
-    
-}
-.contact-heading{
-    font-size: 50px;
-   
-    font-weight:bold;
-    color:white;
-    text-align: center;
-    margin-top: 100px;
-    
-}
-.contact-para{
-    font-size: 20px;
-    
-    
-    color:white;
-    text-align: center;
-}
-
-
-.task-spac{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.contact-container{
-    background-color: white;
-    border-radius: 10px;
-    height:450px;
-    width:800px;
-    
-}
-.card-arrange{
-    margin-left: 250px;
-}
-.card-heading{
-    font-size: 24px;
-    font-weight: 500;
-    padding:16px;
-}
-.small-card{
-    border-radius: 5px;
-    border-width: 0px;
-    background-color: #abeaeb;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.inner-text{
-    color:grey;
-    font-size: 16px;
-    padding:20px;
-}
-.nav-bar-style{
+    color: var(--text);
     font-weight: 700;
-    padding-left: 5px;
+}
+
+.contact-background {
+    background: linear-gradient(180deg, #fafafa 0%, #f1f5f9 100%);
+    min-height: 100vh;
+    padding: 120px 0;
+}
+
+.contact-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.contact-para {
+    font-size: 18px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.task-spac {
+    margin: 24px 0;
+}
+
+.contact-container {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 16px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.card-arrange {
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.card-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 10px 0 6px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-control-custom {
+    width: 100%;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: var(--text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.form-control-custom::placeholder {
+    color: var(--muted);
+}
+
+.form-actions {
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .task-background-color,
+    .task1-background,
+    .work-background,
+    .task2-background,
+    .contact-background {
+        padding: 120px 0 80px;
+    }
+
+    .contact-container {
+        max-width: 100%;
+    }
+
+    .card-arrange {
+        margin-left: 0;
+    }
+}
+
+.site-footer {
+    background: var(--panel);
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+    padding: 28px 0;
+}
+
+.footer-text {
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-icon {
+    color: var(--text);
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.28);
 }
